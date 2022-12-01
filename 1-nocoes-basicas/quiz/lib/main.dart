@@ -119,7 +119,14 @@ class _QuizAppState extends State<QuizApp> {
                                             _radioAwnser = newValue;
                                           });
                                         }),
-                                    Text(e.value)
+                                    GestureDetector(
+                                      onTap: () {
+                                        setState(() {
+                                          _radioAwnser = e;
+                                        });
+                                      },
+                                      child: Text(e.value),
+                                    )
                                   ],
                                 ))
                             .toList(),
